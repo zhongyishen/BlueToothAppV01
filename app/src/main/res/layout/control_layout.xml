@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/control_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/start_control"
+        android:layout_width="173dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="20dp"
+        android:background="#5B5B5B"
+        android:text="Start"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/stop_control"
+        android:layout_width="173dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="66dp"
+        android:layout_toRightOf="@+id/start_control"
+        android:background="#5B5B5B"
+        android:text="Stop"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/control_left"
+        android:layout_width="136dp"
+        android:layout_height="145dp"
+        android:layout_below="@+id/control_up"
+
+        android:src="@drawable/left" />
+
+    <ImageView
+        android:id="@+id/control_up"
+        android:layout_width="136dp"
+        android:layout_height="145dp"
+        android:layout_below="@+id/start_control"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/up" />
+
+    <ImageView
+        android:id="@+id/control_right"
+        android:layout_width="136dp"
+        android:layout_height="145dp"
+        android:layout_below="@+id/control_up"
+        android:layout_toRightOf="@+id/control_up"
+        android:src="@drawable/right" />
+
+    <ImageView
+        android:id="@+id/control_down"
+        android:layout_width="136dp"
+        android:layout_height="145dp"
+        android:layout_below="@+id/control_left"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/control_left"
+        android:src="@drawable/down" />
+
+</RelativeLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000"
+    android:id="@+id/pid_layout">
+
+    <TextView
+        android:id="@+id/pid_para"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="当前参数："
+        android:textSize="20dp"
+        android:textColor="#87CEFF"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/pid_para"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+        <RadioButton
+            android:id="@+id/checkbox_angle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@animator/checkbox"
+            android:checked="true"
+            android:text="角度环PID"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/checkbox_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:button="@animator/checkbox"
+            android:text="速度环PID"
+            android:textColor="#FFFFFF" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/pid_p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="P:"
+        android:layout_below="@+id/pid_para"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"/>
+
+
+    <TextView
+        android:id="@+id/pid_i"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I:"
+        android:layout_toRightOf="@+id/pid_p"
+        android:layout_below="@+id/pid_para"
+        android:layout_marginLeft="50dp"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/pid_d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="D:"
+        android:layout_toRightOf="@+id/pid_i"
+        android:layout_below="@+id/pid_para"
+        android:layout_marginLeft="50dp"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/pid_adjust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pid_p"
+        android:textSize="20dp"
+        android:textColor="#87CEFF"
+        android:text="调节参数:"/>
+
+
+
+    <TextView
+        android:id="@+id/pid_p_adjust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pid_adjust"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:textColor="#D4D4D4"
+        android:text="P:0"/>
+
+    <SeekBar
+        android:id="@+id/seekbar_p"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pid_p_adjust"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="3dp"
+        android:max="10000"
+        android:progress="0"
+        android:thumb="@animator/seekbar_thumb" />
+
+    <TextView
+        android:id="@+id/pid_i_adjust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekbar_p"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:textColor="#D4D4D4"
+        android:text="I:0"/>
+
+    <SeekBar
+        android:id="@+id/seekbar_i"
+        android:layout_below="@+id/pid_i_adjust"
+        android:layout_marginLeft="20dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:progress="0"
+        android:max="10000"
+        android:thumb="@animator/seekbar_thumb"/>
+
+
+    <TextView
+        android:id="@+id/pid_d_adjust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekbar_i"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:textColor="#D4D4D4"
+        android:text="D:0"/>
+
+    <SeekBar
+        android:id="@+id/seekbar_d"
+        android:layout_below="@+id/pid_d_adjust"
+        android:layout_marginLeft="20dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:progress="0"
+        android:max="10000"
+        android:thumb="@animator/seekbar_thumb"/>
+
+
+    <Button
+        android:id="@+id/pid_btn_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekbar_d"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="先连接设备"
+        android:textColor="#FFFFFF"
+        android:background="#5B5B5B"/>
+
+    <Button
+        android:id="@+id/pid_btn_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pid_btn_1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="先连接设备"
+        android:textColor="#FFFFFF"
+        android:background="#5B5B5B"/>
+
+    <Button
+        android:id="@+id/pid_btn_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pid_btn_2"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="先连接设备"
+        android:textColor="#FFFFFF"
+        android:background="#5B5B5B"/>
+
+</RelativeLayout>

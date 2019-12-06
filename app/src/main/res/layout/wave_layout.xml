@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000"
+    android:id="@+id/wave_layout">
+
+
+    <!--<com.github.mikephil.charting.charts.LineChart-->
+        <!--android:id="@+id/chart"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="260dp" />-->
+    <ImageView
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/chart01"/>
+
+    <CheckBox
+        android:id="@+id/wave_cb_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chart"
+        android:layout_marginTop="10dp"
+        android:button="@animator/checkbox"
+        android:text="加速度传感器"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+    <CheckBox
+        android:id="@+id/wave_cb_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wave_cb_1"
+        android:layout_marginTop="10dp"
+        android:button="@animator/checkbox"
+        android:text="陀螺仪"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+    <CheckBox
+        android:id="@+id/wave_cb_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wave_cb_2"
+        android:layout_marginTop="10dp"
+        android:button="@animator/checkbox"
+        android:text="卡尔曼滤波"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/wave_btn_1"
+        android:layout_width="173dp"
+        android:layout_height="106dp"
+        android:layout_below="@+id/wave_cb_3"
+        android:background="#5B5B5B"
+        android:text="Stop"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/wave_btn_2"
+        android:layout_width="173dp"
+        android:layout_height="106dp"
+        android:layout_below="@+id/wave_cb_3"
+        android:layout_marginLeft="66dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/wave_btn_1"
+        android:background="#5B5B5B"
+        android:text="Update"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF" />
+
+
+</RelativeLayout>
